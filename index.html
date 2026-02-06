@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will you be my Valentine my Tanu? 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="gradient-bg"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <main class="card">
+    <div class="illustration" aria-hidden="true">💐</div>
+    <h1 class="question" id="question">Will you be my Valentine my Tanu?</h1>
+    <p class="subtitle" id="subtitle">Say yes, you know you want to 💖</p>
+    <p class="subtitle-surprise">I have a surprise if you say yes</p>
+
+    <div class="buttons" id="buttons">
+      <button type="button" class="btn btn-yes" id="yesBtn">Yes</button>
+      <button type="button" class="btn btn-no" id="noBtn">No</button>
+    </div>
+  </main>
+
+  <div class="success-state card" id="successState" hidden>
+    <h2 class="success-title">Yay! You said yes! 🎉</h2>
+    <p class="success-text">Best decision ever. Happy Valentine's Day! 💕</p>
+    <p class="success-calendar-msg">Book your calendar for the full week — it will be a fun week!</p>
+    <ul class="valentine-week" aria-label="Valentine's Week">
+      <li><span class="day-date">Feb 7</span><span class="day-name">Rose Day</span><span class="day-emoji">🌹</span><button type="button" class="day-click-btn" data-day="0">Click me</button></li>
+      <li><span class="day-date">Feb 8</span><span class="day-name">Propose Day</span><span class="day-emoji">💍</span><button type="button" class="day-click-btn" data-day="1">Click me</button></li>
+      <li><span class="day-date">Feb 9</span><span class="day-name">Chocolate Day</span><span class="day-emoji">🍫</span><button type="button" class="day-click-btn" data-day="2">Click me</button></li>
+      <li><span class="day-date">Feb 10</span><span class="day-name">Teddy Day</span><span class="day-emoji">🧸</span><button type="button" class="day-click-btn" data-day="3">Click me</button></li>
+      <li><span class="day-date">Feb 11</span><span class="day-name">Promise Day</span><span class="day-emoji">🤝</span><button type="button" class="day-click-btn" data-day="4">Click me</button></li>
+      <li><span class="day-date">Feb 12</span><span class="day-name">Hug Day</span><span class="day-emoji">🤗</span><button type="button" class="day-click-btn" data-day="5">Click me</button></li>
+      <li><span class="day-date">Feb 13</span><span class="day-name">Kiss Day</span><span class="day-emoji">💋</span><button type="button" class="day-click-btn" data-day="6">Click me</button></li>
+      <li><span class="day-date">Feb 14</span><span class="day-name">Valentine's Day</span><span class="day-emoji">💕</span><button type="button" class="day-click-btn" data-day="7">Click me</button></li>
+    </ul>
+    <div class="hearts" id="hearts" aria-hidden="true"></div>
+  </div>
+
+  <div class="day-modal-overlay" id="dayModalOverlay" hidden aria-hidden="true">
+    <div class="day-modal" role="dialog" aria-labelledby="dayModalTitle" aria-modal="true">
+      <button type="button" class="day-modal-close" id="dayModalClose" aria-label="Close">×</button>
+      <p class="day-modal-emoji" id="dayModalEmoji"></p>
+      <h3 class="day-modal-title" id="dayModalTitle"></h3>
+      <p class="day-modal-message" id="dayModalMessage"></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
